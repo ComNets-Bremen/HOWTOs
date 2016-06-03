@@ -1,8 +1,10 @@
-# Setup and Use of a KVM based VM using OS X
+Setup and Use of a KVM based VM using OS X
+===========================================
 
 This is a HOWTO that describes the procedure on setting up and using a KVM based VM hosted on a remote Linux host from an OS X based host.
 
-## Procedure
+Procedure
+---------
 
 1. From the OS X, ssh login to host machine on which the VMs will be run (Linux host)
 2. Download the .iso of the Linux distribution to install
@@ -25,7 +27,8 @@ This is a HOWTO that describes the procedure on setting up and using a KVM based
    - `sudo qemu-system-x86_64 -hda name_of_disk_image.img -m 2048 -machine accel=kvm -device e1000,netdev=net0,mac=DE:AD:BE:EF:A9:83 -netdev tap,id=net0 -display vnc=:20`
 9. Connect to VM using Chicken
 
-## Notes
+Notes
+-----
 1. Use `screen` in Linux host to run the above commands (e.g., sudo qemu-system-x86_64) 
    - this is to keep the VM running even when you logout
 
