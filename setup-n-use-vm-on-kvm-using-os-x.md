@@ -18,7 +18,7 @@ Procedure
 5. On the OS X, install `Chicken` (VNC client)
    - Download from SourceForge 
    - `https://sourceforge.net/projects/cotvnc/`
-6. Setup Chicken
+6. Setup `Chicken` with the following settings
    - host machine IP address
    - port = 20
 7. Connect to VM using `Chicken`
@@ -32,6 +32,7 @@ Procedure
 
 Notes
 -----
+
 1. Use `screen` on the Linux host to run the above commands (e.g., `sudo qemu-system-x86_64`) 
    - this is to keep the VM running even after you logout from SSH
 2. OS X has a built-in VNC client (through `Finder`), but it seems that it has a protocol version issue that prevents it from connecting with KVM
