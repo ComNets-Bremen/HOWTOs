@@ -1,7 +1,8 @@
 Setup and Use of a KVM based VM using OS X
 ===========================================
 
-This is a HOWTO that describes the procedure on setting up and using a KVM based VM hosted on a remote Linux host from an OS X based host.
+This is a HOWTO that describes the procedure of setting up and using a KVM based VM hosted on a remote Linux host from an OS X based host over VNC.
+
 
 Procedure
 ---------
@@ -14,7 +15,7 @@ Procedure
    - 10G is the disk space
 4. Bring up the VM with the linux .iso attached to install Linux
    - `sudo qemu-system-x86_64 -hda name_of_disk_image.img -cdrom ubuntu-16.04-desktop-amd64.iso -boot d -m 2048 -machine accel=kvm -device e1000,netdev=net0,mac=DE:AD:BE:EF:A9:83 -netdev tap,id=net0 -display vnc=:20`
-5. On the OS X, install `Chicken` 
+5. On the OS X, install `Chicken` (VNC client)
    - Download from SourceForge 
    - `https://sourceforge.net/projects/cotvnc/`
 6. Setup Chicken
@@ -28,10 +29,12 @@ Procedure
    - `sudo qemu-system-x86_64 -hda name_of_disk_image.img -m 2048 -machine accel=kvm -device e1000,netdev=net0,mac=DE:AD:BE:EF:A9:83 -netdev tap,id=net0 -display vnc=:20`
 9. Connect to VM using `Chicken`
 
+
 Notes
 -----
-1. Use `screen` in Linux host to run the above commands (e.g., `sudo qemu-system-x86_64`) 
+1. Use `screen` on the Linux host to run the above commands (e.g., `sudo qemu-system-x86_64`) 
    - this is to keep the VM running even after you logout from SSH
+2. OS X has a built-in VNC client (through `Finder`), but it seems that it has a protocol version issue that prevents it from connecting with KVM
 
 If you have any questions or comments, please write to,
 
