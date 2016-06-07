@@ -3,16 +3,16 @@ Setup and Use of a KVM based VM using OS X
 
 This is a HOWTO that describes the procedure of setting up and using a KVM based VM hosted on a remote Linux Host from an OS X Host over VNC. The following diagram shows the different components referred to in the procedure below and how they are connected.
 
-+---------------+                    +---------------+
-|   +-------+   |                    |     +-------+ |
-|   | Guest |<---------------------------->|Chicken| |
-|   |  VM   |   |                    |     +-------+ |
-|   +-------+   |                    |     +-----+   |
-|               |<------------------------>| ssh |   |
-|               |                    |     +-----+   |
-+---------------+                    +---------------+
-   Linux Host                            OS X Host 
-(with KVM deployed)
+    +---------------+                    +---------------+
+    |   +-------+   |                    |     +-------+ |
+    |   | Guest |<---------------------------->|Chicken| |
+    |   |  VM   |   |                    |     +-------+ |
+    |   +-------+   |                    |     +-----+   |
+    |               |<------------------------>| ssh |   |
+    |               |                    |     +-----+   |
+    +---------------+                    +---------------+
+       Linux Host                            OS X Host 
+    (with KVM deployed)
 
 
 Keywords
