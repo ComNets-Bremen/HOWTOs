@@ -20,27 +20,27 @@ Procedure
    - Give the login credentials on the Linux server - authentication process is linked to the Linux authentication system automatically, over PAM, (I think ;-) so nothing extra has to be done
 
 3. Create a disk image on the Linux server (on the volume mounted in Step 2)
-   - Run Disk Utility
+   - Run `Disk Utility`
    - Invoke `New Image`
    - Select a location in the Linux server as the location to create the disk 
    - Rest of the values,
-     - Name: `bkup`, Size: 500GB (or what ever), Format: Mac OS Extended (Case-sensitive, Journaled)
-     - Encryption: 128-bit (I usually don't use), Partitions: Single partition - Apple Partition Map
-     - Image Format: sparse bundle disk image
-   - Hit create
-   - Creation resulted in it also being mounted (e.g., `/Volumes/bkup`)
+     - Name: `bkup`, Size: 500GB (or what ever), Format: `Mac OS Extended (Case-sensitive, Journaled)`
+     - Encryption: `128-bit` (I usually don't use), Partitions: `Single partition - Apple Partition Map`
+     - Image Format: `sparse bundle disk image`
+   - Hit `Create`
+   - Creation results in it also being mounted (e.g., `/Volumes/bkup`)
    - If it is not mounted, double click on the sparse bundle to mount it
 
 4. Make Time Machine use this new disk image (i.e., `/Volumes/bkup`) as its backup disk. 
-   - Open a Terminal
+   - Open a `Terminal`
    - Run the command `sudo tmutil setdestination /Volumes/bkup`
 
 5. Check Time Machine Preferences
-   - Run System Preferences
-   - Select Time Machine
+   - Run `System Preferences`
+   - Select `Time Machine`
    - Select `Select Disk` and see if the disk (`bkup`) is selected
 
-6. Thats it !!! Now hit "Back Up Now" in Time Machine
+6. Thats it !!! Now hit `Back Up Now` on `Time Machine`
    - Usually, the first backup takes painfully long (if large), depending on your network connection
    - See Notes for a method to minimize the initial backup time
 
